@@ -1,11 +1,10 @@
 public class ReturnObjectImpl implements ReturnObject {
-	private ErrorMessage errorMessage;
+	private ErrorMessage errorMessage = ErrorMessage.NO_ERROR;
 	private Object returnValue;
 	public ReturnObjectImpl(ErrorMessage errorMessage) {
 		this.errorMessage = errorMessage;
 	}
 	public ReturnObjectImpl(Object returnValue) {
-		this.errorMessage = ErrorMessage.NO_ERROR;
 		this.returnValue = returnValue;
 	}
 	public ErrorMessage getError() {

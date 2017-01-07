@@ -3,15 +3,12 @@ The aims of this coursework are to gain practice with:
 - dynamic data structures by implementing some of their most commonly used methods; and
 - array, linked lists, and stacks by writing examples of higher level methods
 
-Github repo must be named 'cw-ds'.
+No custom interfaces, don't change interfaces. Follow the convention IntefaceImpl except when noted otherwise.
 
-All interfaces referred to in this document are provided. Every class that implements an interface must follow the convention IntefaceImpl except when noted otherwise in the text. For example, the implementation of interface ReturnObject must be called ReturnObjectImpl. Do not make any change to the provided Java files: they will be overwritten when the coursework is graded anyway.
-
-You must not use any complex type to provide a solution to this coursework with the following exceptions: boxed type, Strings, arrays, and any other complex type that you define yourself are allowed. You cannot use third-party libraries either, or any class from the Java library with the exceptions noted above. Do not use generics either, you do not need them.
+No complex types except boxed type, String, array, self-defined. No generics.
 
 In order to complete the coursework, you have to:
 
-- write a class that implements interface ReturnObject
 - write an implementation of interface List based on arrays called ArrayList
 - write an implementation of interface List based on pointers called LinkedList
 - write an implementation of interface FunctionalList that extends ArrayList called FunctionalArrayList
@@ -20,15 +17,13 @@ In order to complete the coursework, you have to:
 - write a class StackImpl that extends class AbstractStack
 - write an implementation of interface ImprovedStack. This class cannot extend either AbstractStack or StackImpl
 
-We will clone your github repo at the due date and time.
-
-Following several questions from students, the following points clarify several aspects that were undefined or unclear in the assignment's description.
+- add comments and stuff
+- reread all interfaces
+- rerun all tests
 
 1. Constructors
 
-Some students have asked about the constructors of the classes that will implement the interfaces provided. Several different possiblities are available.
-
-Most classes must have only the default constructor, with no arguments. The exceptions are described below. Classes may not have any constructor not described in this document - be careful about this because using the wrong constructor may result in your code not compiling with the automatic tests used for grading.
+No constructors except below:
 
 StackImpl: This class must have only one constructor with only one parameter of type List (i.e. a stack can be created using either an ArrayList or a LinkedList as the underlying data structure).
 
@@ -36,9 +31,7 @@ ImprovedStackImpl: This class must have only one constructor with only on parame
 
 2. Exceptions
 
-The code must work without throwing any exceptions in any circumstance (e.g. including NullPointerException, etc).
-
-As we have not covered exception handling yet, the code must not use the keywords throw, throw, try, catch, or finally. (If you do not know what these keywords are, that is perfectly normal; we will learn about them in due time).
+Don't throw errors.
 
 3. A couple of clarifications regarding lists
 
