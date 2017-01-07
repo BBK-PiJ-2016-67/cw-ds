@@ -17,10 +17,8 @@ No complex types except boxed type, String, array, self-defined. No generics.
 
 In order to complete the coursework, you have to:
 
-- write an implementation of interface FunctionalList that extends ArrayList called FunctionalArrayList
-- write an implementation of interface FunctionalList that extens LinkedList called FunctionalLinkedList
-
 - write an implementation of interface SampleableList
+
 - write a class StackImpl that extends class AbstractStack
 - write an implementation of interface ImprovedStack. This class cannot extend either AbstractStack or StackImpl
 
