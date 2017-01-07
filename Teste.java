@@ -1,7 +1,7 @@
 public class Teste {
 	private int tests = 0;
 	private int passingTests = 0;
-	public void expect(String title, Object x, Object y) {
+	public void itShould(String title, Object x, Object y) {
 		this.tests += 1;
 		if (x == y) {
 			this.passingTests += 1;
