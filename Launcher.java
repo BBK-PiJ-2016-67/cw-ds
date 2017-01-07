@@ -3,27 +3,21 @@ public class Launcher {
 		Launcher launcher = new Launcher();
 		launcher.launch();
 	}
-	public void expect(String title, Object x, Object y) {
-		if (x == y) {
-			System.out.println("\u001B[32m" + "PASS: " + title + "\u001B[0m");
-		} else {
-			System.out.println("\u001B[31m" + "FAIL: " + title + "\u001B[0m");
-		}
-	}
 	public void launch() {
+		Teste teste = new Teste();
 		/**
 		 * Successful return object implementation
 		 */
 		ReturnObjectImpl successObject = new ReturnObjectImpl("Hiii");
-		this.expect("It should have no error", successObject.hasError(), false);
-		this.expect("It should have no error", successObject.getError(), ErrorMessage.NO_ERROR);
-		this.expect("It should have a value", successObject.getReturnValue(), "Hiii");
+		teste.expect("It should have no error", successObject.hasError(), false);
+		teste.expect("It should have no error", successObject.getError(), ErrorMessage.NO_ERROR);
+		teste.expect("It should have a value", successObject.getReturnValue(), "Hiii");
 		/**
 		 * Error return object implementation
 		 */
 		ReturnObjectImpl errorObject = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
-		this.expect("It should have no error", errorObject.hasError(), true);
-		this.expect("It should have no error", errorObject.getError(), ErrorMessage.EMPTY_STRUCTURE);
-		this.expect("It should have a value", errorObject.getReturnValue(), null);
+		teste.expect("It should have no error", errorObject.hasError(), true);
+		teste.expect("It should have no error", errorObject.getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.expect("It should have a value", errorObject.getReturnValue(), null);
 	}
 }
