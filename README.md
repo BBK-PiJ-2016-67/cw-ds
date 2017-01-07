@@ -17,7 +17,6 @@ No complex types except boxed type, String, array, self-defined. No generics.
 
 In order to complete the coursework, you have to:
 
-- write an implementation of interface List based on pointers called LinkedList
 - write an implementation of interface FunctionalList that extends ArrayList called FunctionalArrayList
 - write an implementation of interface FunctionalList that extens LinkedList called FunctionalLinkedList
 - write an implementation of interface SampleableList
@@ -26,6 +25,7 @@ In order to complete the coursework, you have to:
 
 - add comments and stuff
 - reread all interfaces
+- add more tests
 - rerun all tests
 
 1. Constructors
