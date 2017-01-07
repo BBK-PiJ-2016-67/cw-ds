@@ -115,6 +115,48 @@ public class Launcher {
 		teste.itShould("return a sample list", sampleableListImpl.sample().get(1).getReturnValue(), "three");
 		teste.itShould("return a sample list", sampleableListImpl.sample().get(2).getReturnValue(), "five");
 		/**
+		 * Stack implementation
+		 */
+		teste.section("Stack");
+		ArrayList emptyList = new ArrayList();
+		StackImpl emptyStack = new StackImpl(emptyList);
+		teste.itShould("return true if the stack is empty", emptyStack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", emptyStack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", emptyStack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", emptyStack.size(), 0);
+		emptyStack.push("one");
+		teste.itShould("return false if the stack is not empty", emptyStack.isEmpty(), false);
+		teste.itShould("return the stack size", emptyStack.size(), 1);
+		teste.itShould("return the item at the top of the stack", emptyStack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", emptyStack.pop().getReturnValue(), "one");
+		teste.itShould("return true if the stack is empty", emptyStack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", emptyStack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", emptyStack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", emptyStack.size(), 0);
+		ArrayList list = new ArrayList();
+		list.add("one");
+		list.add("two");
+		StackImpl stack = new StackImpl(list);
+		teste.itShould("return false if the stack is not empty", stack.isEmpty(), false);
+		teste.itShould("return the stack size", stack.size(), 2);
+		teste.itShould("return the item at the top of the stack", stack.top().getReturnValue(), "two");
+		teste.itShould("return and remove the item at the top of the stack", stack.pop().getReturnValue(), "two");
+		teste.itShould("return the item at the top of the stack", stack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", stack.pop().getReturnValue(), "one");
+		teste.itShould("return true if the stack is empty", stack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", stack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", stack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", stack.size(), 0);
+		stack.push("one");
+		teste.itShould("return false if the stack is not empty", stack.isEmpty(), false);
+		teste.itShould("return the stack size", stack.size(), 1);
+		teste.itShould("return the item at the top of the stack", stack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", stack.pop().getReturnValue(), "one");
+		teste.itShould("return true if the stack is empty", stack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", stack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", stack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", stack.size(), 0);
+		/**
 		 * Finish tests
 		 */
 		teste.finish();

@@ -9,6 +9,7 @@
 In order to complete the coursework, you have to:
 
 - write a class StackImpl that extends class AbstractStack
+
 - write an implementation of interface ImprovedStack. This class cannot extend either AbstractStack or StackImpl
 
 - add comments and stuff
