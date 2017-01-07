@@ -28,11 +28,7 @@ Following several questions from students, the following points clarify several 
 
 Some students have asked about the constructors of the classes that will implement the interfaces provided. Several different possiblities are available.
 
-In order to clarify this point, to provide a common learning experience, and to facilitate automatic evaluation of the code, this document specifies the constructor(s) required for each class.
-
-Most classes must have only the default constructor, with no arguments. The exceptions are described below. Classes may not have any constructor not descibred in this document - be careful aout this because using the wrong constructor may result in your code not compiling with the automatic tests used for grading.
-
-ReturnObjectImpl: This class must have two constructors, each of them with only one parameter. The constructor used for succesful operations must receive an Object and the constructor used for failed operations must receive an ErrorMessage as its only parameter.
+Most classes must have only the default constructor, with no arguments. The exceptions are described below. Classes may not have any constructor not described in this document - be careful about this because using the wrong constructor may result in your code not compiling with the automatic tests used for grading.
 
 StackImpl: This class must have only one constructor with only one parameter of type List (i.e. a stack can be created using either an ArrayList or a LinkedList as the underlying data structure).
 
