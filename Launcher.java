@@ -100,6 +100,21 @@ public class Launcher {
 		teste.itShould("return a list of all items except the first", functionalLinkedList.rest().head().getReturnValue(), "two");
 		teste.itShould("leave the original list unchanged", functionalLinkedList.head().getReturnValue(), "one");
 		/**
+		 * Sampleable list implementation
+		 */
+		teste.section("Sampleable List");
+		SampleableListImpl sampleableListImpl = new SampleableListImpl();
+		teste.itShould("return an empty list if the list is empty", sampleableListImpl.sample().size(), 0);
+		teste.itShould("add an item", sampleableListImpl.add("one").getReturnValue(), null);
+		teste.itShould("add an item", sampleableListImpl.add("two").getReturnValue(), null);
+		teste.itShould("add an item", sampleableListImpl.add("three").getReturnValue(), null);
+		teste.itShould("add an item", sampleableListImpl.add("four").getReturnValue(), null);
+		teste.itShould("add an item", sampleableListImpl.add("five").getReturnValue(), null);
+		teste.itShould("add an item", sampleableListImpl.add("six").getReturnValue(), null);
+		teste.itShould("return a sample list", sampleableListImpl.sample().get(0).getReturnValue(), "one");
+		teste.itShould("return a sample list", sampleableListImpl.sample().get(1).getReturnValue(), "three");
+		teste.itShould("return a sample list", sampleableListImpl.sample().get(2).getReturnValue(), "five");
+		/**
 		 * Finish tests
 		 */
 		teste.finish();
