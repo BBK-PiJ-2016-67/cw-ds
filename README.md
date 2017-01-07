@@ -1,3 +1,11 @@
+# PiJ Coursework Two
+
+## Compile & Test
+
+```
+./run.sh
+```
+
 The aims of this coursework are to gain practice with:
 - working against an interface; and
 - dynamic data structures by implementing some of their most commonly used methods; and

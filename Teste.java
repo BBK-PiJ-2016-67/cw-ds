@@ -11,6 +11,13 @@ public class Teste {
 		}
 	}
 	public void finish() {
+		System.out.println();
 		System.out.println(this.passingTests + " of " + this.tests + " tests passed.");
+		System.out.println();
+	}
+	public void section(String title) {
+		System.out.println();
+		System.out.println(title);
+		System.out.println();
 	}
 }

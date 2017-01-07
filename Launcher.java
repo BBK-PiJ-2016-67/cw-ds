@@ -8,6 +8,7 @@ public class Launcher {
 		/**
 		 * Successful return object implementation
 		 */
+		teste.section("Return Object Success");
 		ReturnObjectImpl successObject = new ReturnObjectImpl("Hiii");
 		teste.expect("It should have no error", successObject.hasError(), false);
 		teste.expect("It should have no error", successObject.getError(), ErrorMessage.NO_ERROR);
@@ -15,6 +16,7 @@ public class Launcher {
 		/**
 		 * Error return object implementation
 		 */
+		teste.section("Return Object Error");
 		ReturnObjectImpl errorObject = new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
 		teste.expect("It should have no error", errorObject.hasError(), true);
 		teste.expect("It should have no error", errorObject.getError(), ErrorMessage.EMPTY_STRUCTURE);
@@ -22,6 +24,7 @@ public class Launcher {
 		/**
 		 * Array list implementation
 		 */
+		teste.section("Array List");
 		ArrayList arrayList = new ArrayList();
 		teste.expect("It should indicate whether the array is empty", arrayList.isEmpty(), true);
 		teste.expect("It should return an error if user attempts to access empty array", arrayList.get(0).getError(), ErrorMessage.EMPTY_STRUCTURE);
