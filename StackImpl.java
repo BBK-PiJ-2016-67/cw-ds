@@ -15,7 +15,10 @@ public class StackImpl extends AbstractStack {
 		return topObject;
 	}
 	public void push(Object item) {
-		this.internalList.add(item);
+		super.internalList.add(item);
+	}
+	public int size() {
+		return super.internalList.size();
 	}
 	public ReturnObject top() {
 		if (this.isEmpty()) {
@@ -23,8 +26,5 @@ public class StackImpl extends AbstractStack {
 		}
 		int index = this.size() - 1;
 		return super.internalList.get(index);
-	}
-	public int size() {
-		return super.internalList.size();
 	}
 }

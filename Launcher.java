@@ -157,6 +157,70 @@ public class Launcher {
 		teste.itShould("return an error if the stack is empty", stack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
 		teste.itShould("return the stack size", stack.size(), 0);
 		/**
+		 * Improved stack implementation
+		 */
+		teste.section("Improved Stack");
+		ImprovedStackImpl emptyImprovedStack = new ImprovedStackImpl(emptyList);
+		teste.itShould("return true if the stack is empty", emptyImprovedStack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", emptyImprovedStack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", emptyImprovedStack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", emptyImprovedStack.size(), 0);
+		emptyImprovedStack.push("one");
+		emptyImprovedStack.push("two");
+		emptyImprovedStack.push("two");
+		emptyImprovedStack.push("three");
+		teste.itShould("return a reversed list", emptyImprovedStack.reverse().top().getReturnValue(), "one");
+		teste.itShould("return false if the stack is not empty", emptyImprovedStack.isEmpty(), false);
+		teste.itShould("return the stack size", emptyImprovedStack.size(), 4);
+		teste.itShould("return the item at the top of the stack", emptyImprovedStack.top().getReturnValue(), "three");
+		teste.itShould("return and remove the item at the top of the stack", emptyImprovedStack.pop().getReturnValue(), "three");
+		teste.itShould("return false if the stack is not empty", emptyImprovedStack.isEmpty(), false);
+		teste.itShould("return the stack size", emptyImprovedStack.size(), 3);
+		emptyImprovedStack.remove("two");
+		teste.itShould("return false if the stack is not empty", emptyImprovedStack.isEmpty(), false);
+		teste.itShould("return the stack size", emptyImprovedStack.size(), 1);
+		teste.itShould("return the item at the top of the stack", emptyImprovedStack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", emptyImprovedStack.pop().getReturnValue(), "one");
+		teste.itShould("return true if the stack is empty", emptyImprovedStack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", emptyImprovedStack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", emptyImprovedStack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", emptyImprovedStack.size(), 0);
+		ArrayList newList = new ArrayList();
+		newList.add("one");
+		newList.add("two");
+		newList.add("one");
+		newList.add("one");
+		newList.add("one");
+		ImprovedStackImpl improvedStack = new ImprovedStackImpl(newList);
+		teste.itShould("return a reversed list", improvedStack.reverse().top().getReturnValue(), "one");
+		teste.itShould("return false if the stack is not empty", improvedStack.isEmpty(), false);
+		teste.itShould("return the stack size", improvedStack.size(), 5);
+		teste.itShould("return the item at the top of the stack", improvedStack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", improvedStack.pop().getReturnValue(), "one");
+		teste.itShould("return the item at the top of the stack", improvedStack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", improvedStack.pop().getReturnValue(), "one");
+		teste.itShould("return false if the stack is not empty", improvedStack.isEmpty(), false);
+		teste.itShould("return the stack size", improvedStack.size(), 3);
+		improvedStack.remove("one");
+		teste.itShould("return false if the stack is not empty", improvedStack.isEmpty(), false);
+		teste.itShould("return the stack size", improvedStack.size(), 1);
+		teste.itShould("return a reversed list", improvedStack.reverse().top().getReturnValue(), "two");
+		teste.itShould("return the item at the top of the stack", improvedStack.top().getReturnValue(), "two");
+		teste.itShould("return and remove the item at the top of the stack", improvedStack.pop().getReturnValue(), "two");
+		teste.itShould("return true if the stack is empty", improvedStack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", improvedStack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", improvedStack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", improvedStack.size(), 0);
+		improvedStack.push("one");
+		teste.itShould("return false if the stack is not empty", improvedStack.isEmpty(), false);
+		teste.itShould("return the stack size", improvedStack.size(), 1);
+		teste.itShould("return the item at the top of the stack", improvedStack.top().getReturnValue(), "one");
+		teste.itShould("return and remove the item at the top of the stack", improvedStack.pop().getReturnValue(), "one");
+		teste.itShould("return true if the stack is empty", improvedStack.isEmpty(), true);
+		teste.itShould("return an error if the stack is empty", improvedStack.top().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return an error if the stack is empty", improvedStack.pop().getError(), ErrorMessage.EMPTY_STRUCTURE);
+		teste.itShould("return the stack size", improvedStack.size(), 0);
+		/**
 		 * Finish tests
 		 */
 		teste.finish();
