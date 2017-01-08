@@ -41,11 +41,17 @@ public class Launcher {
 		teste.itShould("get an item at index", arrayList.get(1).getReturnValue(), "three");
 		teste.itShould("get an item at index", arrayList.get(2).getReturnValue(), "two");
 		teste.itShould("indicate whether the array is empty", arrayList.isEmpty(), false);
-		teste.itShould("remove an item at index", arrayList.remove(0).getReturnValue(), null);
+		teste.itShould("remove an item at index", arrayList.remove(0).getReturnValue(), "one");
 		teste.itShould("get an item at index", arrayList.get(0).getReturnValue(), "three");
 		teste.itShould("return the size of the array", arrayList.size(), 2);
+		teste.itShould("add an item", arrayList.add("four").getReturnValue(), null);
+		teste.itShould("add an item", arrayList.add("five").getReturnValue(), null);
+		teste.itShould("remove an item at index", arrayList.remove(3).getReturnValue(), "five");
+		teste.itShould("remove an item at index", arrayList.remove(2).getReturnValue(), "four");
+		teste.itShould("remove an item at index", arrayList.remove(1).getReturnValue(), "two");
+		teste.itShould("remove an item at index", arrayList.remove(0).getReturnValue(), "three");
 		/**
-		 * Array list implementation
+		 * Linked list implementation
 		 */
 		teste.section("Linked List");
 		LinkedList linkedList = new LinkedList();
@@ -68,9 +74,15 @@ public class Launcher {
 		teste.itShould("get an item at index", linkedList.get(1).getReturnValue(), "three");
 		teste.itShould("get an item at index", linkedList.get(2).getReturnValue(), "two");
 		teste.itShould("indicate whether the list is empty", linkedList.isEmpty(), false);
-		teste.itShould("remove an item at index", linkedList.remove(0).getReturnValue(), null);
+		teste.itShould("remove an item at index", linkedList.remove(0).getReturnValue(), "one");
 		teste.itShould("get an item at index", linkedList.get(0).getReturnValue(), "three");
 		teste.itShould("return the size of the list", linkedList.size(), 2);
+		teste.itShould("add an item", linkedList.add("four").getReturnValue(), null);
+		teste.itShould("add an item", linkedList.add("five").getReturnValue(), null);
+		teste.itShould("remove an item at index", linkedList.remove(3).getReturnValue(), "five");
+		teste.itShould("remove an item at index", linkedList.remove(2).getReturnValue(), "four");
+		teste.itShould("remove an item at index", linkedList.remove(1).getReturnValue(), "two");
+		teste.itShould("remove an item at index", linkedList.remove(0).getReturnValue(), "three");
 		/**
 		 * Functional array list implementation
 		 */

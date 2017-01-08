@@ -101,8 +101,8 @@ public class LinkedList implements List {
 	/**
 	 * Removes an element from the list at a given index.
 	 *
-	 * @return 	a {@see ReturnObjectImpl} containing a null return
-	 *			value if successful, otherwise an error
+	 * @return 	a {@see ReturnObjectImpl} containing the removed
+	 *			element if successful, otherwise an error
 	 */
 	public ReturnObject remove(int index) {
 		if (this.isEmpty()) {
@@ -112,21 +112,26 @@ public class LinkedList implements List {
 			return new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
 		}
 		if (index == 0 && this.size() == 1) {
+			Object returnObject = this.head.object;
 			this.head = null;
-			return new ReturnObjectImpl(null);
+			return new ReturnObjectImpl(returnObject);
 		}
 		if (index == 0) {
+			Object returnObject = this.head.object;
 			this.head.next.prev = null;
 			this.head = this.head.next;
-			return new ReturnObjectImpl(null);
+			return new ReturnObjectImpl(returnObject);
 		}
 		Node current = this.head;
 		for (int i = 0; i < index; i++) {
 			current = current.next;
 		}
 		current.prev.next = current.next;
-		current.next.prev = current.prev;
-		return new ReturnObjectImpl(null);
+		if (current.next != null) {
+			current.next.prev = current.prev;
+		}
+		Object returnObject = current.object;
+		return new ReturnObjectImpl(returnObject);
 	}
 	/**
 	 * Indicates the size of the list.

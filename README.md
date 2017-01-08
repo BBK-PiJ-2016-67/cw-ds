@@ -3,5 +3,5 @@
 ## Compile & Test
 
 ```
-./run.sh
+$ ./run.sh
 ```

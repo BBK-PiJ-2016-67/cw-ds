@@ -85,8 +85,8 @@ public class ArrayList implements List {
 	/**
 	 * Removes an element from the array at a given index.
 	 *
-	 * @return 	a {@see ReturnObjectImpl} containing a null return
-	 *			value if successful, otherwise an error
+	 * @return 	a {@see ReturnObjectImpl} containing the removed
+	 *			element if successful, otherwise an error
 	 */
 	public ReturnObject remove(int index) {
 		if (this.isEmpty()) {
@@ -102,8 +102,9 @@ public class ArrayList implements List {
 		for (int i = index; i < newArray.length; i++) {
 			newArray[i] = this.array[i + 1];
 		}
+		ReturnObject returnObject = this.get(index);
 		this.array = newArray;
-		return new ReturnObjectImpl(null);
+		return returnObject;
 	}
 	/**
 	 * Indicates the size of the array.
