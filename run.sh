@@ -1,1 +1,1 @@
-javac *.java && java Launcher
+rm -rf dist && mkdir dist && javac ./lib/*.java -d dist && javac ./*.java -cp dist -d dist && java -cp dist Launcher
