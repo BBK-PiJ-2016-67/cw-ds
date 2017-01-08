@@ -4,9 +4,6 @@
  * @author BBK-PiJ-2016-67
  */
 public class LinkedList implements List {
-	/**
-	 *
-	 */
 	private Node head;
 	/**
 	 *

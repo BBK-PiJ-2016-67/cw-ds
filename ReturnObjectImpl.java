@@ -4,13 +4,7 @@
  * @author BBK-PiJ-2016-67
  */
 public class ReturnObjectImpl implements ReturnObject {
-	/**
-	 *
-	 */
 	private ErrorMessage errorMessage = ErrorMessage.NO_ERROR;
-	/**
-	 *
-	 */
 	private Object returnValue;
 	/**
 	 *
