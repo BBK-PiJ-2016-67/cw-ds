@@ -1,12 +1,17 @@
 /**
- * 
+ * LinkedList is a class implementing {@see List} based on linked
+ * lists.
  *
  * @author BBK-PiJ-2016-67
  */
 public class LinkedList implements List {
 	private Node head;
 	/**
+	 * Adds an element to the list.
 	 *
+	 * @param item	the element to be added
+	 * @return 		a {@see ReturnObjectImpl} containing a null
+	 *				return value if successful, otherwise an error
 	 */
 	public ReturnObject add(Object item) {
 		if (item == null) {
@@ -32,7 +37,13 @@ public class LinkedList implements List {
 		return new ReturnObjectImpl(null);
 	}
 	/**
+	 * Adds an element to the list at a given index.
 	 *
+	 * @param index 	the index at which to add the element
+	 * @param item		the element to be added
+	 * @return 			a {@see ReturnObjectImpl} containing a
+	 *					null return value if successful, otherwise
+	 *					an error
 	 */
 	public ReturnObject add(int index, Object item) {
 		if (item == null) {
@@ -59,7 +70,12 @@ public class LinkedList implements List {
 		return new ReturnObjectImpl(null);
 	}
 	/**
+	 * Returns an element from the list at a given index.
 	 *
+	 * @param index 	the index at which to retrieve the element
+	 * @return 			a {@see ReturnObjectImpl} containing a
+	 *					return value if successful, otherwise an
+	 *					error
 	 */
 	public ReturnObject get(int index) {
 		if (this.isEmpty()) {
@@ -75,13 +91,18 @@ public class LinkedList implements List {
 		return new ReturnObjectImpl(current.object);
 	}
 	/**
+	 * Indicates whether the list is empty or not.
 	 *
+	 * @return 	true if the list is empty, false otherwise
 	 */
 	public boolean isEmpty() {
 		return this.size() == 0;
 	}
 	/**
+	 * Removes an element from the list at a given index.
 	 *
+	 * @return 	a {@see ReturnObjectImpl} containing a null return
+	 *			value if successful, otherwise an error
 	 */
 	public ReturnObject remove(int index) {
 		if (this.isEmpty()) {
@@ -108,7 +129,9 @@ public class LinkedList implements List {
 		return new ReturnObjectImpl(null);
 	}
 	/**
+	 * Indicates the size of the list.
 	 *
+	 * @return 	the size of the list
 	 */
 	public int size() {
 		if (this.head == null) {

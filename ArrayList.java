@@ -8,10 +8,9 @@ public class ArrayList implements List {
 	/**
 	 * Adds an element to the array.
 	 *
-	 * @param item		the element to be added
-	 * @return 			a {@see ReturnObjectImpl} containing a
-	 *					null return value if successful, otherwise
-	 *					an error
+	 * @param item	the element to be added
+	 * @return 		a {@see ReturnObjectImpl} containing a null
+	 *				return value if successful, otherwise an error
 	 */
 	public ReturnObject add(Object item) {
 		if (item == null) {
