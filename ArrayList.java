@@ -6,11 +6,12 @@
 public class ArrayList implements List {
 	private Object[] array = new Object[0];
 	/**
-	 * Adds an {@see Object} to the array.
+	 * Adds an element to the array.
 	 *
-	 * @param item		the item to be added
-	 * @return 			a {@see ReturnObject} containing a null return
-	 *					value if successful, otherwise an error
+	 * @param item		the element to be added
+	 * @return 			a {@see ReturnObjectImpl} containing a
+	 *					null return value if successful, otherwise
+	 *					an error
 	 */
 	public ReturnObject add(Object item) {
 		if (item == null) {
@@ -25,12 +26,13 @@ public class ArrayList implements List {
 		return new ReturnObjectImpl(null);
 	}
 	/**
-	 * Adds an {@see Object} to the array at a given index.
+	 * Adds an element to the array at a given index.
 	 *
-	 * @param index 	the index at which to add the item
-	 * @param item		the item to be added
-	 * @return 			a {@see ReturnObject} containing a null return
-	 *					value if successful, otherwise an error
+	 * @param index 	the index at which to add the element
+	 * @param item		the element to be added
+	 * @return 			a {@see ReturnObjectImpl} containing a
+	 *					null return value if successful, otherwise
+	 *					an error
 	 */
 	public ReturnObject add(int index, Object item) {
 		if (item == null) {
@@ -51,11 +53,12 @@ public class ArrayList implements List {
 		return new ReturnObjectImpl(null);
 	}
 	/**
-	 * Returns an {@see Object} from the array at a given index.
+	 * Returns an element from the array at a given index.
 	 *
-	 * @param index 	the index at which to retrieve the item
-	 * @return 			a {@see ReturnObject} containing a return
-	 *					value if successful, otherwsie an error
+	 * @param index 	the index at which to retrieve the element
+	 * @return 			a {@see ReturnObjectImpl} containing a
+	 *					return value if successful, otherwise an
+	 *					error
 	 */
 	public ReturnObject get(int index) {
 		if (this.isEmpty()) {
@@ -81,9 +84,9 @@ public class ArrayList implements List {
 		return this.size() == 0;
 	}
 	/**
-	 * Removes an {@see Object} from the array at a given index.
+	 * Removes an element from the array at a given index.
 	 *
-	 * @return 	a {@see ReturnObject} containing a null return
+	 * @return 	a {@see ReturnObjectImpl} containing a null return
 	 *			value if successful, otherwise an error
 	 */
 	public ReturnObject remove(int index) {
