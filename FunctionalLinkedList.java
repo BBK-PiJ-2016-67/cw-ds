@@ -1,7 +1,18 @@
+/**
+ * 
+ *
+ * @author BBK-PiJ-2016-67
+ */
 public class FunctionalLinkedList extends LinkedList implements FunctionalList {
+	/**
+	 *
+	 */
 	public ReturnObject head() {
 		return super.get(0);
 	}
+	/**
+	 *
+	 */
 	public FunctionalList rest() {
 		FunctionalLinkedList newLinkedList = new FunctionalLinkedList();
 		if (super.size() <= 1) {

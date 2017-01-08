@@ -1,10 +1,24 @@
+/**
+ * 
+ *
+ * @author BBK-PiJ-2016-67
+ */
 public class StackImpl extends AbstractStack {
+	/**
+	 *
+	 */
 	public StackImpl(List list) {
 		super(list);
 	}
+	/**
+	 *
+	 */
 	public boolean isEmpty() {
 		return this.size() == 0;
 	}
+	/**
+	 *
+	 */
 	public ReturnObject pop() {
 		if (this.isEmpty()) {
 			return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
@@ -14,12 +28,21 @@ public class StackImpl extends AbstractStack {
 		super.internalList.remove(index);
 		return topObject;
 	}
+	/**
+	 *
+	 */
 	public void push(Object item) {
 		super.internalList.add(item);
 	}
+	/**
+	 *
+	 */
 	public int size() {
 		return super.internalList.size();
 	}
+	/**
+	 *
+	 */
 	public ReturnObject top() {
 		if (this.isEmpty()) {
 			return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);

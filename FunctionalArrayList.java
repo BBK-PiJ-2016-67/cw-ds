@@ -1,7 +1,18 @@
+/**
+ * 
+ *
+ * @author BBK-PiJ-2016-67
+ */
 public class FunctionalArrayList extends ArrayList implements FunctionalList {
+	/**
+	 *
+	 */
 	public ReturnObject head() {
 		return super.get(0);
 	}
+	/**
+	 *
+	 */
 	public FunctionalList rest() {
 		FunctionalArrayList newArrayList = new FunctionalArrayList();
 		if (super.size() <= 1) {

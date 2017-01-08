@@ -1,4 +1,12 @@
+/**
+ * 
+ *
+ * @author BBK-PiJ-2016-67
+ */
 public class SampleableListImpl extends ArrayList implements SampleableList {
+	/**
+	 *
+	 */
 	public SampleableList sample() {
 		SampleableListImpl sampleableList = new SampleableListImpl();
 		for (int i = 0; i < super.size(); i++) {

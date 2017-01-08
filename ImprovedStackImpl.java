@@ -1,11 +1,28 @@
+/**
+ * 
+ *
+ * @author BBK-PiJ-2016-67
+ */
 public class ImprovedStackImpl implements ImprovedStack {
+	/**
+	 *
+	 */
 	private List list;
+	/**
+	 *
+	 */
 	public ImprovedStackImpl(List list) {
 		this.list = list;
 	}
+	/**
+	 *
+	 */
 	public boolean isEmpty() {
 		return this.size() == 0;
 	}
+	/**
+	 *
+	 */
 	public ReturnObject pop() {
 		if (this.isEmpty()) {
 			return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
@@ -15,9 +32,15 @@ public class ImprovedStackImpl implements ImprovedStack {
 		this.list.remove(index);
 		return topObject;
 	}
+	/**
+	 *
+	 */
 	public void push(Object item) {
 		this.list.add(item);
 	}
+	/**
+	 *
+	 */
 	public void remove(Object object) {
 		if (this.isEmpty()) {
 			return;
@@ -30,6 +53,9 @@ public class ImprovedStackImpl implements ImprovedStack {
 			}
 		}
 	}
+	/**
+	 *
+	 */
 	public ImprovedStack reverse() {
 		ArrayList newList = new ArrayList();
 		for (int i = this.list.size() - 1; i >= 0; i--) {
@@ -38,9 +64,15 @@ public class ImprovedStackImpl implements ImprovedStack {
 		}
 		return new ImprovedStackImpl(newList);
 	}
+	/**
+	 *
+	 */
 	public int size() {
 		return this.list.size();
 	}
+	/**
+	 *
+	 */
 	public ReturnObject top() {
 		if (this.isEmpty()) {
 			return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);

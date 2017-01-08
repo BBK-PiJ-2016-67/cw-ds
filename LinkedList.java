@@ -1,5 +1,16 @@
+/**
+ * 
+ *
+ * @author BBK-PiJ-2016-67
+ */
 public class LinkedList implements List {
+	/**
+	 *
+	 */
 	private Node head;
+	/**
+	 *
+	 */
 	public ReturnObject add(Object item) {
 		if (item == null) {
 			return new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT);
@@ -23,6 +34,9 @@ public class LinkedList implements List {
 		current.next = node;
 		return new ReturnObjectImpl(null);
 	}
+	/**
+	 *
+	 */
 	public ReturnObject add(int index, Object item) {
 		if (item == null) {
 			return new ReturnObjectImpl(ErrorMessage.INVALID_ARGUMENT);
@@ -47,6 +61,9 @@ public class LinkedList implements List {
 		current.prev = node;
 		return new ReturnObjectImpl(null);
 	}
+	/**
+	 *
+	 */
 	public ReturnObject get(int index) {
 		if (this.isEmpty()) {
 			return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
@@ -60,9 +77,15 @@ public class LinkedList implements List {
 		}
 		return new ReturnObjectImpl(current.object);
 	}
+	/**
+	 *
+	 */
 	public boolean isEmpty() {
 		return this.size() == 0;
 	}
+	/**
+	 *
+	 */
 	public ReturnObject remove(int index) {
 		if (this.isEmpty()) {
 			return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
@@ -87,6 +110,9 @@ public class LinkedList implements List {
 		current.next.prev = current.prev;
 		return new ReturnObjectImpl(null);
 	}
+	/**
+	 *
+	 */
 	public int size() {
 		if (this.head == null) {
 			return 0;
