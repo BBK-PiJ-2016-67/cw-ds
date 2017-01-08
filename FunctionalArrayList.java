@@ -8,7 +8,7 @@ public class FunctionalArrayList extends ArrayList implements FunctionalList {
 	/**
 	 * Returns the element at the beginning of the list.
 	 *
-	 * @return 	an element conforming to {@see ReturnObject}
+	 * @return 	an element implementing {@see ReturnObject}
 	 *			containing a return value if successful, otherwise
 	 *			an error
 	 */
