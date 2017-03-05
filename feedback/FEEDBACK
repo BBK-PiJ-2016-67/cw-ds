@@ -1,4 +1,7 @@
-Please see the general comments, some of which are applicable to your submission.
 The output of the various checking tools should be paid attention to although checkstyle is a little "aggressive".
 
-...
+Please refer to the general comments, re:
+
+* Constants vs Magic Numbers (SampleableList)
+* Internal classes being visible externally (Node) - prefer "package" access or
+"private" access.
